@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.todo-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.left{
+    grid-column: span 1;
+    padding: 50px;
+}
+.middle{
+    grid-column: span 1;
+    margin: 20px;
+}
+.right{
+    grid-column: span 1;
+    margin: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+    max-height: 70%;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+}
+#title-input{
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+}
+#description-input{
+    width: 100%;
+    height: 160px;
+    padding: 5px;
+}
+textarea{
+    resize : vertical;
+}
+#title-input:focus, #description-input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+#add{
+    height: 30px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(0, 209, 0);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.pending-list, .completed-list{
+    width: 25rem;
+    margin-right: 10px;
+}
+
+.list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    max-width: 100%;
+}
+#todo-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.complete-btn, .delete-btn{
+    cursor: pointer;
+    height: 20px;
+}
+.todo-title{
+    width: 20%;
+    word-wrap: break-word;
+}
+.todo-description{
+    width: 55%;
+    word-wrap: break-word;
+}
+.time{
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    background-color: white;
+    padding: 4px;
+}
+@media screen and (max-width: 1150px) {
+    .todo-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pending-list, .completed-list{
+        width: 40rem;
+    
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .todo-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        padding: 25px;
+    }
+    .pending-list, .completed-list{
+        width: 25rem;
+        }
+}
+
+
+@media screen and (max-width: 400px) {
+    .todo-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .todo{
+        gap: 5px;
+    }
+    .left{
+        padding: 0px;
+    }
+    .pending-list, .completed-list, .form{
+        width: 15rem;
+        }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="todo-page">
+        <main class="todo-all">
+            <section class="left">
+                <div class="form">
+                    <h3>ToDo</h3>
+                    <input id="title-input" type="text" id="input" placeholder="Title" autocomplete="off">
+                    <textarea id="description-input" placeholder="Description"></textarea>
+                    <button id="add">Add</button>
+                </div>
+            </section>
+            <section class="middle">
+                <div class="pending-list">
+                    <div class="list-header">
+                        <h4>Title</h4>
+                        <h4>Description</h4>
+                        <h4>Action</h4>
+                    </div>
+                    <div id="todo-list">
+
+                    </div>
+                </div>
+            </section>
+            <section class="right">
+                <div class="completed-list">
+                    <div class="list-header">
+                        <h4>Title</h4>
+                        <h4>Description</h4>
+                        <h4>Action</h4>
+                    </div>
+                    <div id="completed-todo">       
+                </div>
+
+            </section>
+        </main>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
